@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalki-2898 AD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 10;
+        }
+
+        .play-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+     <!-- Transparent Header -->
+     <header class="transparent-header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Video Background -->
+    <video id="backgroundVideo" muted loop>
+        <source src="images/kalki-trailer.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content Overlay -->
+    <div class="banner">
+        <div class="slider" style="--quantity: 10">
+            <div class="item" style="--position: 1"><img src="images/kalki-1.jpg" alt=""></div>
+            <div class="item" style="--position: 2"><img src="images/kalki-2.jpg" alt=""></div>
+            <div class="item" style="--position: 3"><img src="images/kalki-3.jpg" alt=""></div>
+            <div class="item" style="--position: 4"><img src="images/kalki-4.jpg" alt=""></div>
+            <div class="item" style="--position: 5"><img src="images/kalki-5.jpg" alt=""></div>
+            <div class="item" style="--position: 6"><img src="images/kalki-6.jpg" alt=""></div>
+            <div class="item" style="--position: 7"><img src="images/kalki-7.jpg" alt=""></div>
+            <div class="item" style="--position: 8"><img src="images/kalki-8.webp" alt=""></div>
+            <div class="item" style="--position: 9"><img src="images/kalki-9.png" alt=""></div>
+            <div class="item" style="--position: 10"><img src="images/kalki-10.jpg" alt=""></div>
+        </div>
+        <div class="content">
+            <h1 data-content="KALKI 2898 AD">KALKI 2898 AD</h1>
+
+            <div class="model"></div>
+
+        </div>
+    </div>
+
+
+    <!-- Play Button -->
+    <button class="play-button" onclick="playVideoWithSound()">Play Video</button>
+
+
+    <!-- Transparent Footer -->
+    <footer class="transparent-footer">
+        <p>&copy; ~Designed By <a href="https://www.instagram.com/ami_webdeveloper/">@AMI_WebDeveloper</a> in 2025 . All rights reserved.</p>
+    </footer>
+    <script>
+        const video = document.getElementById('backgroundVideo');
+
+        function playVideoWithSound() {
+            video.muted = false; // Unmute the video
+            video.play(); // Play the video
+        }
+    </script>
+</body>
+
+</html>
